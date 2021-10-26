@@ -1,0 +1,60 @@
+
+
+
+
+  {% extends 'base.html' %}
+
+
+    {% block content %}
+
+    
+
+
+
+
+
+  {% include 'base_components/home_search.html' %}
+
+
+
+
+
+<div style="">
+
+<div style="background-image: url('/static/assets/images/back.png')">
+
+<h1 style="font-size: 3em;background-color: transparent !important;margin-left: 80px;font-family: 'Raleway', sans-serif;"><strong>Trending Recently</strong></h1> 
+
+
+
+  {% include 'trending/swipper.html' %}
+
+
+
+
+</div>
+ </div>     
+
+
+<div style='width:100vw;'>
+  <h1 style="font-size: 3em; margin-top: 80px; margin-left: 80px;font-family: 'Raleway', sans-serif;"><strong>Trending Projects</strong></h1>
+
+
+
+           {% include 'projects/card.html' with link='/projects/view' name='Nust Formula' badge='Electrical' image='/static/assets/images/sae.jpg' description='The official account of NUST Formula Student Team, of National  University of Sciences and Technology. The official account of NUST Formula Student Team, of National University of Sciences and Technology The official account of NUST Formula Student Team,' %}
+     
+              {% include 'ideas/card.html' with name='Drone delivery System' user='By Huzaifa Irfan' description='Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum et Malorum for use in a type specimen book.' %}
+
+
+           {% include 'challenges/card.html' with name='UAS Challenge 2021' badge='NUST' image='/static/assets/images/drone.jpg' description='Starting This October, student teams undertake a full design and build cycle of an unmanned aerial system (UAS) with a maximum take off mass of 10kg to undertake specific mission objectives, culminating in a final fly-off event in June the following year. The system will be required to operate automatically, performing a series of tasks such as area search, navigating waypoints, accurately dropping the Aid Package and returning to base via a defined route.' %}
+     
+
+
+     </div>
+    
+    <!-- End your project here-->
+
+
+
+ {% endblock %}
+

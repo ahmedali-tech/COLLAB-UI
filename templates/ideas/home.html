@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+
+
+
+    <section class="jumbotron landing-display text-center"
+    style="display: grid; place-items: center; width: 100%;  margin-top:100px;"
+  >
+  {% include 'base_components/search_bar.html' with create_type='ideas' search_text='Search for Awesome Ideas' create_link='#' %}
+
+</section>
+
+      {% include 'ideas/card.html' with name='Drone delivery System' user='By Huzaifa Irfan' description='An unmanned aerial vehicle (UAV) or uncrewed aerial vehicle, commonly known as a drone, is an aircraft without any human pilot, crew or passengers on board. UAVs are a component of an unmanned aircraft system (UAS),' %}
+
+      {% include 'ideas/card.html' with name='Automated Surgery' user='By Micheal Glenn' description='procedures that are done using robotic systems. Robotically-assisted surgery was developed to try to overcome the limitations of pre-existing minimally-invasive surgical procedures and to enhance the capabilities of surgeons performing open surgery.' %}
+
+            {% include 'ideas/card.html' with name='Contactless Taxis' user='By Muhammad Saad' description=' app designed to help you monitor individual driver takings and targets, securely record payments, and above all offer a fast and flexible contactless payment option to your clients. This is fast, effective, on-the-go, and set to transform your sales and payments process!' %}
+
+
+{% endblock %}

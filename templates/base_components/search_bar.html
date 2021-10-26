@@ -1,0 +1,191 @@
+
+
+
+<div class="container flex-center rgba-black-light /*shadow p-3 mb-5 rounded*/" style=" display: grid; place-items: center;font-family: 'Raleway', sans-serif;  ">
+
+{% if search_text %}
+
+<h1  style="font-size: 2.3em;margin-top: 0px;text-align: left !important; z-index:2;font-family: 'Raleway', sans-serif;"><strong>{{ search_text }}</strong></h1>
+
+{% else %}
+
+{% if create_type %}
+
+<h1  style="font-size: 2.3em;margin-top: 0px;text-align: left !important; z-index:2;font-family: 'Raleway', sans-serif;"><strong>Search for the awesome {{ create_type }} people have been doing</strong></h1>
+
+{% else %}
+
+    <h1  style="font-size: 2.3em;margin-top: 0px;text-align: left !important; z-index:2;font-family: 'Raleway', sans-serif;"><strong>Search for the awesome stuff people have been doing</strong></h1>
+    
+
+{% endif %}
+
+
+{% endif %}
+
+
+       
+
+<div  style="margin-top:40px; width:100%; height: 100%;margin-left: 90px;" class="form-inline d-flex justify-content-center align-items-center">
+
+  <form class="form-inline d-flex" action="/search" method="get" >
+
+    <div class="input-group rounded" style="max-width: 900px; width:60vw; justify-items: center; justify-content: center;" >
+
+
+      <div  style="display: inline;flex-direction: row; max-width: 900px; width:60vw; " >
+  
+  <div style="display: flex; flex-direction: row; padding-left:40px; ">
+      <input type="checkbox" class="btn-check" id="btn-check" name="all" autocomplete="off" />
+  <label class="btn btn-primary trapezoid" for="btn-check" style=' height:105%;'><span class='untrapezoid'>All</span></label>
+  
+  <input type="checkbox" class="btn-check" id="btn-check2" name="projects" checked autocomplete="off" />
+  <label class="btn btn-primary trapezoid" for="btn-check2"><span class='untrapezoid'>Projects</span></label>
+  
+
+
+  <input type="checkbox" class="btn-check" id="btn-check3" name="ideas" autocomplete="off" />
+  <label class="btn btn-primary trapezoid" for="btn-check3" style=""><span class='untrapezoid'>Ideas</span></label></div>
+</div>
+
+  
+        <div class="input-group">
+            <input class="form-control py-2 rounded-pill mr-1 pr-5" type="search" value="" id="example-search-input" placeholder='Search' style="padding:40px; font-size: 30px; height: 60px !important;width:100%; display: -webkit-inline-flex;">
+       
+                <button style="margin-top:-60px ; margin-left: 840px;" class="btn rounded-pill border-0 ml-n5" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+          
+        </div>
+   
+
+
+
+
+        <div class="">
+        
+<!-- <input style="" type='submit' class="btn btn-primary btn-lg btn-rounded" value='Search' /> -->
+
+
+
+ <button
+ style="margin-top:10px;"
+  type="button"
+  class="btn btn-primary btn-lg btn-rounded"
+  data-mdb-toggle="modal"
+  data-mdb-target="#exampleModal"
+>
+  Filters
+</button>
+
+   </div>
+
+</div>
+
+
+
+<!-- Modal -->
+ <div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Filters</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+
+  
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    name='people'
+
+    id="flexCheckDefault"
+  />
+  <label class="form-check-label" for="flexCheckDefault" style="color: black;">
+   People
+  </label>
+</div>
+
+
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    name='assignments'
+    id="flexCheckChecked"
+    checked
+  />
+  <label class="form-check-label" for="flexCheckChecked" style="color: black;">
+    Assignments
+  </label>
+</div>
+
+
+
+
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+
+    name='challenges'
+    id="flexCheckChecked"
+    checked
+  />
+  <label class="form-check-label" for="flexCheckChecked" style="color: black;">
+    Challenges
+  </label>
+</div>
+
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+          Close
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+{% if create_link %}
+{% if create_type %}
+
+<a href='{{create_link}}'>
+<button type="button" class="btn btn-primary btn-rounded" style="height: 40px;margin-left: 100px;margin-bottom: 100px;">Create {{ create_type }}</button> 
+</a>
+
+{% endif %}
+
+
+{% endif %}
+
+</div>
+
+
+
+
+</form>
+
+
+
+
+
+</div>
+
+
+</div>

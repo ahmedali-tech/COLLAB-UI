@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+    <section class="jumbotron landing-display text-center"
+    style="display: grid; place-items: center; width: 100%; margin-top:100px;"
+  >
+
+  {% include 'base_components/search_bar.html'  with search_text='Search for Awesome Challenges' %}
+</section>
+
+
+      
+      {% include 'challenges/card.html' with name='UAS Challenge 2021' badge='NUST' image='/static/assets/images/drone.jpg' description='Starting This October, student teams undertake a full design and build cycle of an unmanned aerial system (UAS) with a maximum take off mass of 10kg to undertake specific mission objectives, culminating in a final fly-off event in June the following year. The system will be required to operate automatically, performing a series of tasks such as area search, navigating waypoints, accurately dropping the Aid Package and returning to base via a defined route.' %}
+     
+       {% include 'challenges/card.html' with name='Global Climate Challange 2021' badge='Nestle' image='/static/assets/images/iceberg-5163649_1920.jpg' description='Starting This October, student teams undertake a full design and build cycle of an unmanned aerial system (UAS) with a maximum take off mass of 10kg to undertake specific mission objectives, culminating in a final fly-off event in June the following year. The system will be required to operate automatically, performing a series of tasks such as area search, navigating waypoints, accurately dropping the Aid Package and returning to base via a defined route.' %}
+     
+           {% include 'challenges/card.html' with name='Google summmer of Code 2022' badge='Google' image='/static/assets/images/macbook-459196_1920.jpg' description='Starting This October, student teams undertake a full design and build cycle of an unmanned aerial system (UAS) with a maximum take off mass of 10kg to undertake specific mission objectives, culminating in a final fly-off event in June the following year. The system will be required to operate automatically, performing a series of tasks such as area search, navigating waypoints, accurately dropping the Aid Package and returning to base via a defined route.' %}
+     
+
+{% endblock %}

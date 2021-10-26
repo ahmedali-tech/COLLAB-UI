@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="swiper-container mySwiper">
+    <div  class="swiper-button-prev"></div>
+
+      <div class="swiper-wrapper">
+  
+        {% include 'trending/card.html' with image='/static/assets/images/ai.jpg' name='Artificial Intellegence' %}
+  
+        {% include 'trending/card.html' with image='/static/assets/images/technology-4256272_1920.jpg' name='Robotics' %}
+          
+        {% include 'trending/card.html' with image='/static/assets/images/algorithm-3859536_1920.jpg' name='Machine learning' %}
+          
+        {% include 'trending/card.html' with image='/static/assets/images/code-1839406_1920.jpg' name='Python' %}
+          
+        {% include 'trending/card.html' with image='/static/assets/images/house-1477041_1280.jpg' name='Architecture' %}
+
+    </div>
+    <div  class="swiper-button-next"></div>
+  </div>
+</div>
+
+<!-- swiper-bundle -->
+<script src="/static/js/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    slidesPerGroup: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+
+      991: {
+        slidesPerView: 5,
+      },
+    },
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

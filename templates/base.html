@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  
+    {% include 'base_components/head.html' %}
+
+    <link rel="stylesheet" type="text/css" href="/static/css/sidebar.css">
+
+  </head>
+  <body >
+
+
+
+    
+    <div id="body-pd">
+
+    
+        <header class="header" id="header">
+          
+           
+{% if user.is_authenticated %}
+                   {% include 'base_components/navbar.html' with side_bar='1' %}
+
+        {% else %}
+ {% include 'base_components/navbar.html' %}
+        {% endif %}
+                   <!-- <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt="">
+                  
+                  </div> -->
+                  
+           </header>
+       
+{% if user.is_authenticated %}
+           {% include 'base_components/sidebar.html' %}
+           <script src="/static/js/sidebar.js"> </script>
+
+          
+           <!--Container Main start-->
+           <div class="body_content">
+
+ {% else %}
+
+  <!--Container Main start-->
+           <div class="body_content_noside">
+ {% endif %}
+
+
+      {% block content %}
+   
+      {% endblock %}
+ 
+
+    </div>
+
+    <!--Container Main end-->
+
+    
+
+    </div>
+
+
+
+</body>
+</html>

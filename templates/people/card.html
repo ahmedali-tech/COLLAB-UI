@@ -1,0 +1,59 @@
+<div
+  style="
+    
+
+    margin-left: 50px;
+
+    border-radius: 25px;
+  "
+  class="card-body"
+>
+   <a  href='{{ link }}'>
+  <button style="border: none; background: transparent" class="signup-design">
+    <div
+      style="
+       background: linear-gradient(180deg, #A3CDE6 0%, rgba(172, 194, 250, 0) 100%),
+linear-gradient(0deg, #B0D8E1, #B0D8E1);
+
+
+        border-radius: 25px !important;
+        margin-left: 40px;
+
+        width: 80rem;
+        max-width: 1280px;
+      "
+      class="card_item w-100"
+    >
+   
+        <img src="{{ image }}" width="220" height="180" />
+   
+
+      <div
+        style="margin-left: 20px; text-align: justify; padding-right: 60px"
+        class="card-body"
+      >
+        <h5 class="card-title" style="font-family: 'Raleway', sans-serif;"><strong>{{ name }}</strong></h5>
+
+        <span class="badge " style="background: rgba(96, 1, 211, 1);
+        ">{{ badge }}</span>
+
+        <p
+          style="
+            margin-top: 10px;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-family: 'Raleway', sans-serif;
+        
+          "
+          class="card-text"
+        >
+        {{ description }}
+        
+        </p>
+    
+      </div>
+    </div>
+  </button>
+     </a>
+</div>

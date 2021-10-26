@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+
+
+
+    <section class="jumbotron landing-display text-center"
+    style="display: grid; place-items: center; width: 100%;  margin-top:100px;"
+  >
+  {% include 'base_components/search_bar.html' with create_type='projects' create_link='#' %}
+
+</section>
+
+
+
+      {% include 'projects/card.html' with link='/projects/view' name='Nust Formula' badge='Electrical' image='/static/assets/images/sae.jpg' description='The official account of NUST Formula Student Team, of National  University of Sciences and Technology. The official account of NUST Formula Student Team, of National University of Sciences and Technology The official account of NUST Formula Student Team,' %}
+     
+     
+       {% include 'projects/card.html' with link='/projects/view' name='Tiler' badge='Programming' image='/static/assets/images/tiler.png' description='If artistic projects are your thing, we recommend giving Tiler a shot. Tiler is a fun and exciting open-source project that is built using Python and allows anyone to create interesting and unique images.' %}
+     
+
+           {% include 'projects/card.html' with link='/projects/view' name='Autonomous Flight Drone' badge='Mechanical' image='/static/assets/images/drone.jpg' description='DJI Air 2S is a powerful all-in-one camera drone designed for creators on the move. It offers a 1-inch CMOS sensor, 5.4K video recording, an innovative MasterShots feature, 12km 1080p video transmission, four-directional obstacle sensing, and more. DJI Air 2S is the perfect way to turn any adventure into a stunning visual creation.' %}
+     
+           {% include 'projects/card.html' with link='/projects/view' name='Jython' badge='Programming' image='/static/assets/images/Jython.png' description='Jython is an implementation of the Python programming language designed to run on the Java platform. The implementation was formerly known as JPython' %}
+     
+
+{% endblock %}
